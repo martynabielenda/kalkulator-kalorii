@@ -30,12 +30,14 @@ Aplikacja posiada system logowania, który zabezpiecza dostęp do kalkulatora. P
 - Wykorzystanie wspólnego nagłówka i stopki.
 - Osobne widoki dla formularza logowania i kalkulatora.
 - Oddzielny plik CSS odpowiedzialny za wygląd aplikacji.
+- Różowa stylistyka CalorieCare z responsywnym układem formularzy i kart wyników.
 
 ## Wykorzystane technologie
 
 - PHP
 - HTML
 - CSS
+- Google Fonts (DM Sans i Manrope – ładowane zewnętrznie)
 - Sesje PHP
 - Git i GitHub
 

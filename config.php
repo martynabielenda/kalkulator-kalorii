@@ -1,20 +1,20 @@
 <?php
-// Wspolna konfiguracja aplikacji i sesji.
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
+$conf->debug = true; # set true during development and use in your code (for instance check if true to send additional message)
 
-// Adres katalogu glownego projektu, dziala rowniez po zmianie nazwy folderu.
-$scriptName = str_replace('\\\\', '/', $_SERVER['SCRIPT_NAME'] ?? '');
-$appPosition = strpos($scriptName, '/app/');
-if ($appPosition !== false) {
-    $baseUrl = substr($scriptName, 0, $appPosition);
-} else {
-    $baseUrl = dirname($scriptName);
-    if ($baseUrl === '.' || $baseUrl === DIRECTORY_SEPARATOR) {
-        $baseUrl = '';
-    }
-}
-if (!defined('APP_BASE_URL')) {
-    define('APP_BASE_URL', rtrim($baseUrl, '/'));
-}
+# ---- Webapp location
+$conf->server_name = 'localhost';   # server address and port
+$conf->protocol = 'http';           # http or https
+$conf->app_root = '/amelia/public';   # project subfolder in domain (relative to main domain)
+
+# ---- Database config - values required by Medoo
+$conf->db_type = 'mysql';
+$conf->db_server = 'localhost';
+$conf->db_name = '_database_name';
+$conf->db_user = '_user';
+$conf->db_pass = '_password';
+$conf->db_charset = 'utf8';
+
+# ---- Database config - optional values
+$conf->db_port = '3306';
+#$conf->db_prefix = '';
+$conf->db_option = [ PDO::ATTR_CASE => PDO::CASE_NATURAL, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION ];

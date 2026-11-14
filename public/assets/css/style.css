@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 30px 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff5f9;
+  color: #493541;
+  line-height: 1.6;
+}
+
+header {
+  max-width: 900px;
+  margin: 0 auto 25px;
+  padding: 25px 30px;
+  background: linear-gradient(135deg, #e98bb5, #c96b9b);
+  color: white;
+  border-radius: 18px;
+  box-shadow: 0 5px 18px rgba(160, 75, 117, 0.15);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+header p {
+  margin-bottom: 0;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 35px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 5px 25px rgba(160, 75, 117, 0.1);
+}
+
+h1,
+h2,
+h3 {
+  color: #a94e7c;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+form {
+  display: grid;
+  gap: 17px;
+  margin-top: 25px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+label {
+  font-weight: bold;
+  color: #68475a;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #e8c4d5;
+  border-radius: 9px;
+  background: #fffafd;
+  color: #493541;
+  font-size: 15px;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #d875a5;
+  box-shadow: 0 0 0 3px rgba(216, 117, 165, 0.15);
+}
+
+button {
+  padding: 13px 22px;
+  border: none;
+  border-radius: 10px;
+  background: #d875a5;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #b95788;
+}
+
+a {
+  color: #bd5c8d;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.error {
+  padding: 12px;
+  color: #a52b4b;
+  background: #fff0f3;
+  border: 1px solid #f2c2d0;
+  border-radius: 9px;
+}
+
+section {
+  margin-top: 30px;
+  padding: 25px;
+  background: #fff4f8;
+  border: 1px solid #f0c8da;
+  border-radius: 14px;
+}
+
+section h2,
+section h3 {
+  color: #a94e7c;
+}
+
+section h2:last-child {
+  font-size: 32px;
+  color: #c45d91;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 15px 10px;
+  }
+
+  main {
+    padding: 22px 17px;
+  }
+
+  header {
+    padding: 20px;
+  }
+
+  header h1 {
+    font-size: 25px;
+  }
+}
